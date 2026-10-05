@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs - Job Portal</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">JobPortal</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/applications">Applications</a>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+
+    </nav>
+
+
+    <section class="categories">
+
+        <h2>Available Jobs</h2>
+
+        <div class="category-container">
+
+            {% for job in jobs %}
+
+            <div class="category">
+
+                <h3>{{ job.title }}</h3>
+
+                <p><strong>Company:</strong> {{ job.company }}</p>
+
+                <p><strong>Location:</strong> {{ job.location }}</p>
+
+                <p><strong>Experience:</strong> {{ job.experience }}</p>
+
+                <p>{{ job.description }}</p>
+
+                <br>
+
+                <a href="/job/{{ job.id }}" class="btn">View Job</a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+</body>
+</html>

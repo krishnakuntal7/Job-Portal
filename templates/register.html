@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Job Portal</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">JobPortal</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/login">Login</a>
+        </div>
+
+    </nav>
+
+
+    <section class="categories">
+
+        <div class="category">
+
+            <h1>Create Account</h1>
+
+            <br>
+
+            <form method="POST">
+
+                <label>Full Name</label>
+                <br>
+
+                <input
+                    type="text"
+                    name="name"
+                    required
+                >
+
+                <br><br>
+
+
+                <label>Email</label>
+                <br>
+
+                <input
+                    type="email"
+                    name="email"
+                    required
+                >
+
+                <br><br>
+
+
+                <label>Password</label>
+                <br>
+
+                <input
+                    type="password"
+                    name="password"
+                    required
+                >
+
+                <br><br>
+
+
+                <label>Register As</label>
+                <br>
+
+                <select name="role" required>
+
+                    <option value="job_seeker">
+                        Job Seeker
+                    </option>
+
+                    <option value="recruiter">
+                        Recruiter
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <button type="submit" class="btn">
+                    Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

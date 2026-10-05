@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Job Portal</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">JobPortal</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/register">Register</a>
+        </div>
+
+    </nav>
+
+
+    <section class="categories">
+
+        <div class="category">
+
+            <h1>Login</h1>
+
+            <br>
+
+            <form method="POST">
+
+                <label>Email</label>
+                <br>
+
+                <input
+                    type="email"
+                    name="email"
+                    required
+                >
+
+                <br><br>
+
+
+                <label>Password</label>
+                <br>
+
+                <input
+                    type="password"
+                    name="password"
+                    required
+                >
+
+                <br><br>
+
+
+                <button type="submit" class="btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
